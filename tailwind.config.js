@@ -2,7 +2,19 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {}
+    extend: {
+      animation: {
+        'reveal': 'revealTextSlowly .3s forwards',
+      },
+      keyframes: {
+        revealTextSlowly: {
+          to: { color: 'white' }
+        },
+      },
+      rotate: {
+        '180': '180deg',
+      },
+    },
   },
-  plugins: []
+  plugins: [require('daisyui')]
 };
