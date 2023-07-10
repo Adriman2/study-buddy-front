@@ -1,28 +1,34 @@
 <script>
-    export let showForm = false;
-    export let toggleShowForm;
-  
-    let title = "";
-    let subject = "";
-    let files = null;
-  
-    const submitForm = () => {
-      // Do something with title, subject, files
-      // You might want to add them to your "vocab" array or send them to a server
-  
+  export let showForm = false;
+  export let toggleShowForm;
+
+  let title = "";
+  let subject = "";
+  let files = null;
+
+  const submitForm = async () => {
+      const formData = new FormData();
+      formData.append('file', files[0]);
+
+      const response = await fetch('/api/upload', {
+    method: 'POST',
+    body: formData});
+
+
       // Clear the form
       title = "";
       subject = "";
       files = null;
-  
+
       // Hide the form
       toggleShowForm();
-    };
-  
-    const closeModal = (e) => {
-      if (e.target === e.currentTarget) toggleShowForm();
-    };
-  </script>
+  };
+
+  const closeModal = (e) => {
+    if (e.target === e.currentTarget) toggleShowForm();
+  };
+</script>
+
   
   {#if showForm}
     <div
@@ -66,7 +72,7 @@
                 <input
                   type="file"
                   bind:files
-                  class="mt-1 file-input block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  class="mt-1 file-input file-input-primary block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
               </div>
               <div>
