@@ -34,7 +34,7 @@
     </div>
 </div>
 
-<div style="overflow: auto; height: 300px;">
+<div style="overflow: auto; height: 70% ;">
     {#each findings as finding (finding.text)}
     <div class="card w-96 bg-base-100 shadow-xl">
         <div class="card-body">
