@@ -56,6 +56,8 @@ To get started with StudyBuddy Web, follow the steps below:
 
 7. Before running the application, make sure to start the backend service. Instructions on how to do this can be found in the [backend repository](https://github.com/yesid-lopez/study-buddy-api).
 
+If you wish to see the live version of the application, visit StudyBuddy. We hope that you find StudyBuddy to be a valuable tool for your learning journey. Happy studying!
+
 ## Environment Variables
 
 To run the app locally and generate a certain number of flashcards, set a Vite environment variable:
