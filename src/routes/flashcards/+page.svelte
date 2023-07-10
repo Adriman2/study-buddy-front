@@ -1,5 +1,4 @@
-<script>
-    import { vocab } from "$lib/vocabData.js";
+<!-- <script>
     import Flashcard from "$lib/Flashcard.svelte";
     import { enhance } from "$app/forms";
     export let form;
@@ -39,7 +38,7 @@
   </div>
 
   <!-- BUTTONS -->
-  <div id="btn-cont">
+<!--   <div id="btn-cont">
     <button class="arrow-btn" on:click={prevCard}>&#8592;</button>
 
     <button on:click={toggleShowBack}>
@@ -47,7 +46,7 @@
     </button>
     <button class="arrow-btn" on:click={nextCard}>&#8594;</button>
   </div>
-
+ -->
   <style>
     main {
       display: flex;
@@ -100,4 +99,4 @@
       background-color: #0051d4; /* Darker blue on active click */
     }
   </style>
-  
+   -->
