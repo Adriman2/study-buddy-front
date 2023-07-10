@@ -1,4 +1,4 @@
-# StudyBuddy Web: Your Personal AI Study Companion - Now on the Web
+# StudyBuddy Web: Your Personal AI Study Companion - Now on the Web (under construction)
 
 StudyBuddy Web is a web application designed to elevate your studying experience. It's not just a study tool, but your buddy who's always there to help you comprehend your learning materials better. This application comes with key functionalities such as PDF document uploads, flashcard generation, interactive Q&A and content search.
 
