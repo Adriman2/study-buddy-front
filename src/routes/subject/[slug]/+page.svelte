@@ -1,10 +1,10 @@
 <script>
-  import { onMount } from 'svelte';
   import ActivityBox from "$lib/ActivityBox.svelte";
   import Flashcards from "$lib/Flashcards.svelte";
   import AskYourBuddy from "$lib/AskYourBuddy.svelte";
   import FindInText from "$lib/FindInText.svelte";
   import QuizMe from "$lib/QuizMe.svelte";
+
 
   let activities = [
     {
