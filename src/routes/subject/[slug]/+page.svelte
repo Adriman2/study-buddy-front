@@ -4,6 +4,7 @@
   import AskYourBuddy from "$lib/AskYourBuddy.svelte";
   import FindInText from "$lib/FindInText.svelte";
   import QuizMe from "$lib/QuizMe.svelte";
+  import { currentSubject } from '$lib/stores.js';
 
 
   let activities = [
@@ -34,10 +35,12 @@
   }
 </script>
 
+
+
 <div class="flex flex-col items-center pt-16">
   {#if showActivities}
-  <h1 class="text-2xl font-bold">How do you want to learn? </h1>
-  <p>Select an activity:</p>
+  <h1 class="text-2xl font-bold my-4">How do you want to learn: {$currentSubject.title}? </h1>
+  <p >Select an activity:</p>
     <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
       {#each activities as activity (activity.slug)}
         <ActivityBox {activity} on:activitySelected={handleActivitySelection} />
